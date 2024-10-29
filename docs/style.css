@@ -49,5 +49,11 @@ nav a:hover {
     max-width: 100%;
     border-radius: 10px;
 }
-
-
+@font-face {
+    font-family: "My Custom Font";
+    src: url(fonts/Rowdies-Regular.ttf)
+}
+h1 {
+    font-family: "My Custom Font";
+    src: url(fonts/Rowdies-Regular.ttf)
+}
