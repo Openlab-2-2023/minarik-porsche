@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: black;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function changeIframe(url) {
+            document.getElementById('window').src = url;
+        }
+    </script>
+</head>
+<body>
+    <iframe style="border: 0;" src="ad.html" width="420" height="345"></iframe>
+    <iframe src="https://www.youtube.com/embed/n3zcG7fkgeY" width="420" height="345"></iframe>
+
+    <iframe id="window" width="550" height="350"></iframe>
+    <h2>Linky načítajú Iframe</h2>
+    <nav>
+        <a href="javascript:void(0)" onclick="changeIframe('https://sportnet.sme.sk/')">Načítaj Sportnet.com</a>
+        <a href="javascript:void(0)" onclick="changeIframe('https://sk.wikipedia.org/wiki/FC_Barcelona')">Načítaj Wikipedia</a>
+    </nav>
+    
+</body>
+</html>
