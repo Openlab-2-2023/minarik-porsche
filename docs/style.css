@@ -4,32 +4,41 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    width: 100%;
+    
 }
+
 header {
-    background-color: #5a5a5a;;
+    background-color: black;
+    ;
     color: #ffffff;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 nav {
     display: flex;
     justify-content: center;
     background-color: #141414;
 }
+
 nav a {
     color: #ffffff;
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
 }
+
 nav a:hover {
     background-color: #575757;
 }
+
 .container {
     padding: 20px;
     text-align: center;
 }
+
 .car-card {
     background-color: #ffffff;
     border-radius: 10px;
@@ -39,29 +48,20 @@ nav a:hover {
     padding: 20px;
     text-align: left;
     transition: transform 0.2s, box-shadow 0.2s;
-     color: black;
+    color: black;
 }
+
 .car-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
+
 .car-card img {
     max-width: 100%;
     border-radius: 10px;
 }
-#homeLink {
-    color: #5a5a5a;
-}
-
-#modelsLink {
-    color: #5a5a5a;
-}
-
-#contactLink {
-    color: #5a5a5a;
-}
 #backToTopBtn {
-    display: none; 
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 30px;
@@ -76,6 +76,43 @@ nav a:hover {
     border-radius: 10px;
     transition: opacity 0.3s ease;
 }
+
 #backToTopBtn:hover {
     background-color: #555;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.car-card {
+    flex: 1 1 calc(33.333% - 30px);
+    margin: 15px;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    height: 100vh;
+    
+    width: 100vw;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
 }
