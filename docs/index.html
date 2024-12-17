@@ -9,9 +9,24 @@
 </head>
 
 <body>
-    <button onclick="topFunction()" id="backToTopBtn" title="Back to Top">BackToTop</button>
+    <button onclick="topFunction()" id="backToTopBtn" title="Back to Top">Back To Top</button>
 
-    <script> window.onscroll = function () { scrollFunction() }; function scrollFunction() { const btn = document.getElementById("backToTopBtn"); if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) { btn.style.display = "block"; } else { btn.style.display = "none"; } } function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); } function openModal(imgSrc) { const modal = document.getElementById("myModal"); const modalImg = document.getElementById("img01"); modal.style.display = "block"; modalImg.src = imgSrc; } function closeModal() { const modal = document.getElementById("myModal"); modal.style.display = "none"; } </script>
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            const btn = document.getElementById("backToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
 
     <header>
 
@@ -64,7 +79,8 @@
                 718 series is perfect for those who crave both excitement and sophistication on the road.</p>
         </div>
         <div class="car-card">
-            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fmacan.png&w=640&q=75" alt="Porsche Macan">
+            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fmacan.png&w=640&q=75" 
+                alt="Porsche Macan">
             <h2>Porsche Macan</h2>
             <p>The Porsche Macan is a compact luxury SUV that offers dynamic driving performance with the versatility
                 and comfort of an SUV. Featuring powerful engines, precise handling, and advanced technology, it
@@ -80,9 +96,6 @@
                 technology, it delivers an exhilarating driving experience. The Cayenne's stylish interior and range of
                 features make it perfect for those seeking both performance and practicality in a premium SUV.</p>
         </div>
-    </div>
-    <div id="myModal" class="modal"> <span class="close" onclick="closeModal()">&times;</span> <img
-            class="modal-content" id="img01">
     </div>
 </body>
 
