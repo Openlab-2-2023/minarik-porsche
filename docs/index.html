@@ -6,87 +6,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porsche</title>
-          
 </head>
 
 <body>
     <button onclick="topFunction()" id="backToTopBtn" title="Back to Top">BackToTop</button>
 
-    <script>
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            const btn = document.getElementById("backToTopBtn");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                btn.style.display = "block";
-            } else {
-                btn.style.display = "none";
-            }
-        }
-
-        function topFunction() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        function openModal(imgSrc) {
-            const modal = document.getElementById("myModal");
-            const modalImg = document.getElementById("img01");
-            modal.style.display = "block";
-            modalImg.src = imgSrc;
-        }
-
-        function closeModal() {
-            const modal = document.getElementById("myModal");
-            modal.style.display = "none";
-        }
-    </script>
+    <script> window.onscroll = function () { scrollFunction() }; function scrollFunction() { const btn = document.getElementById("backToTopBtn"); if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) { btn.style.display = "block"; } else { btn.style.display = "none"; } } function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); } function openModal(imgSrc) { const modal = document.getElementById("myModal"); const modalImg = document.getElementById("img01"); modal.style.display = "block"; modalImg.src = imgSrc; } function closeModal() { const modal = document.getElementById("myModal"); modal.style.display = "none"; } </script>
 
     <header>
+
+
         <div class="header-container">
             <p class="nadpis">PORSCHE</p>
             <video width="100%" height="100%"
-                src="./y2mate.com - Style comfort and innovation this is the new allelectric Porsche Macan_1080.mp4"
+                src="./y2mate.com - Style comfort and innovation  this is the new allelectric Porsche Macan_1080.mp4"
                 autoplay muted loop playsinline></video>
+
         </div>
+
     </header>
 
+
+
     <div class="container">
+
         <div class="car-card">
-            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2F911.png&w=640&q=75" onclick="openModal(this.src)">
+            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2F911.png&w=640&q=75">
             <h2>Porsche 911</h2>
-            <p>The Porsche 911 is a timeless sports car that combines classic design with cutting-edge performance. Known for its powerful engines, precise handling, and iconic silhouette, the 911 offers an exhilarating driving experience. Its luxurious interior and advanced technology make it perfect for those who appreciate both tradition and modern innovation in a high-performance vehicle.</p>
+            <p>The Porsche 911 is a timeless sports car that combines classic design with cutting-edge performance.
+                Known for its powerful engines, precise handling, and iconic silhouette, the 911 offers an exhilarating
+                driving experience. Its luxurious interior and advanced technology make it perfect for those who
+                appreciate both tradition and modern innovation in a high-performance vehicle.</p>
         </div>
         <div class="car-card">
-            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Ftaycan.png&w=640&q=75" alt="Porsche Taycan" onclick="openModal(this.src)">
+            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Ftaycan.png&w=640&q=75" alt="Porsche Taycan">
             <h2>Porsche Taycan</h2>
-            <p>The Porsche Taycan is an all-electric sports sedan that offers cutting-edge performance and advanced technology. Featuring incredible acceleration and a sleek design, it provides an exhilarating driving experience. The Taycan’s luxurious interior and innovative features make it perfect for those seeking both high performance and modern comfort in an electric vehicle.</p>
+            <p>The Porsche Taycan is an all-electric sports sedan that offers cutting-edge performance and advanced
+                technology. Featuring incredible acceleration and a sleek design, it provides an exhilarating driving
+                experience. The Taycan’s luxurious interior and innovative features make it perfect for those seeking
+                both high performance and modern comfort in an electric vehicle.</p>
         </div>
         <div class="car-card">
-            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fpanamera.png&w=640&q=75" alt="Porsche Panamera" onclick="openModal(this.src)">
+            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fpanamera.png&w=640&q=75"
+                alt="Porsche Panamera">
             <h2>Porsche Panamera</h2>
-            <p>The Porsche Panamera is a luxury sports sedan that delivers high-performance driving with the comfort and elegance of a premium vehicle. It features powerful engine options, cutting-edge technology, and a refined interior, making it perfect for both luxury and exhilarating driving experiences.</p>
+            <p>The Porsche Panamera is a luxury sports sedan that delivers high-performance driving with the comfort and
+                elegance of a premium vehicle. It features powerful engine options, cutting-edge technology, and a
+                refined interior, making it perfect for both luxury and exhilarating driving experiences.</p>
         </div>
         <div class="car-card">
-            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2F718.png&w=640&q=75" alt="Porsche 718/Boxster/Cayman" onclick="openModal(this.src)">
+            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2F718.png&w=640&q=75"
+                alt="Porsche 718/Boxster/Cayman">
             <h2>Porsche 718/Boxster/Cayman</h2>
-            <p>The Porsche 718, including the Boxster and Cayman models, is a compact sports car that combines dynamic driving performance with sleek design. Featuring turbocharged engines, precise handling, and advanced technology, it offers an exhilarating driving experience. With a stylish and comfortable interior, the 718 series is perfect for those who crave both excitement and sophistication on the road.</p>
+            <p>The Porsche 718, including the Boxster and Cayman models, is a compact sports car that combines dynamic
+                driving performance with sleek design. Featuring turbocharged engines, precise handling, and advanced
+                technology, it offers an exhilarating driving experience. With a stylish and comfortable interior, the
+                718 series is perfect for those who crave both excitement and sophistication on the road.</p>
         </div>
         <div class="car-card">
-            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fmacan.png&w=640&q=75" alt="Porsche Macan" onclick="openModal(this.src)">
+            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fmacan.png&w=640&q=75" alt="Porsche Macan">
             <h2>Porsche Macan</h2>
-            <p>The Porsche Macan is a compact luxury SUV that offers dynamic driving performance with the versatility and comfort of an SUV. Featuring powerful engines, precise handling, and advanced technology, it provides an exhilarating driving experience. With a stylish interior and a range of features, the Macan is perfect for those who seek both performance and practicality in a luxury vehicle.</p>
+            <p>The Porsche Macan is a compact luxury SUV that offers dynamic driving performance with the versatility
+                and comfort of an SUV. Featuring powerful engines, precise handling, and advanced technology, it
+                provides an exhilarating driving experience. With a stylish interior and a range of features, the Macan
+                is perfect for those who seek both performance and practicality in a luxury vehicle.</p>
         </div>
         <div class="car-card">
-            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fcayenne.png&w=640&q=75" alt="Porsche Cayenne" onclick="openModal(this.src)">
+            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fcayenne.png&w=640&q=75"
+                alt="Porsche Cayenne">
             <h2>Porsche Cayenne</h2>
-            <p>The Porsche Cayenne is a luxury SUV that combines exceptional performance with the versatility and comfort of a larger vehicle. Featuring powerful engine options, precise handling, and advanced technology, it delivers an exhilarating driving experience. The Cayenne's stylish interior and range of features make it perfect for those seeking both performance and practicality in a premium SUV.</p>
+            <p>The Porsche Cayenne is a luxury SUV that combines exceptional performance with the versatility and
+                comfort of a larger vehicle. Featuring powerful engine options, precise handling, and advanced
+                technology, it delivers an exhilarating driving experience. The Cayenne's stylish interior and range of
+                features make it perfect for those seeking both performance and practicality in a premium SUV.</p>
         </div>
     </div>
-
-    
-    <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="img01">
+    <div id="myModal" class="modal"> <span class="close" onclick="closeModal()">&times;</span> <img
+            class="modal-content" id="img01">
     </div>
 </body>
 
