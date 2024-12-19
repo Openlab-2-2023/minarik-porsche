@@ -149,3 +149,9 @@ video {
     border: none;
     object-fit: cover;
 }
+a {
+    text-decoration: none;
+}
+
+
+
