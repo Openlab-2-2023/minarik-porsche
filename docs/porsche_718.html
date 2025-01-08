@@ -4,16 +4,44 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porsche 718/Boxster/Cayman</title>
+    <title>Porsche 718 Cayman</title>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <p class="nadpis">Porsche 718/Boxster/Cayman</p>
-            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2F718.png&w=640&q=75" alt="Porsche 718/Boxster/Cayman" />
-            <p>The Porsche 718 is a dynamic sports car series,<br>available as the Boxster convertible or Cayman coupe.<br>Powered by turbocharged engines, it offers incredible agility<br>and driving pleasure.</p>
-        
+            <p class="nadpis">Porsche 718 Cayman</p>
+            <div class="carousel-container">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div class="carousel">
+                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXABuN9dMGF4tl3U0%25z8rMHIspbWvanYb%255y%25oq%25vSTmjMXD4qAZeoNBPUSfUx4RmHlCgI7Zl2dioCt7lQDcFG871Ynfurnau5yPewy7BCvNzxMYHGXoq1kGUr6FObznOwRuT0qyzx7e2HRu41UzQKP9Ynfur2Ex5yPewH4ACvWdT7wkqdak6vsER6mOcuLAlWRDdV24i" alt="Porsche 718 Cayman Image 1">
+                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXABuN9dMGF4tl3U0%25z8rMH1spbWvanYb%255y%25oq%25vSTmjMXD4qAZeoNBPUSfUx4RmHlCgI7Zl2dioCt7lQDcFG871Ynfurnau5yPewy7BCvNzxMYHGXoq1kGUr6FObznOwRuT0qyzx7e2HRu41UzQKP9Ynfur2Ex5yPewH4ACvWdT7wkqdak6vsER6mOcuLAlWRDdV24i" alt="Porsche 718 Cayman Image 2">
+                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXABuN9dMGF4tl3U0%25z8rMH8spbWvanYb%255y%25oq%25vSTmjMXD4qAZeoNBPUSfUx4RmHlCgI7Zl2dioCt7lQDcFG871Ynfurnau5yPewy7BCvNzxMYHGXoq1kGUr6FObznOwRuT0qyzx7e2HRu41UzQKP9Ynfur2Ex5yPewH4ACvWdT7wkqdak6vsER6mOcuLAlWRDdV24i" alt="Porsche 718 Cayman Image 3">
+                </div>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            <p>The Porsche 718 Cayman combines sharp handling and exhilarating performance<br>with a mid-engine layout and powerful turbocharged engines.</p>
         </div>
     </header>
+
+    <script>
+        let slideIndex = 0;
+
+        function changeSlide(n) {
+            const slides = document.getElementsByClassName("carousel-slide");
+            slideIndex += n;
+
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            if (slideIndex >= slides.length) slideIndex = 0;
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex].style.display = "block";
+        }
+
+        changeSlide(0);
+    </script>
 </body>
 </html>
+

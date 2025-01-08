@@ -10,10 +10,38 @@
     <header>
         <div class="header-container">
             <p class="nadpis">Porsche Panamera</p>
-            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fpanamera.png&w=640&q=75" alt="Porsche Panamera" />
-            <p>The Porsche Panamera is a luxury sports sedan<br>that blends exceptional performance with comfort<br>and advanced features. Whether you choose the V6,<br>V8, or hybrid powertrains, the Panamera delivers<br>an exhilarating driving experience.</p>
-
+            <div class="carousel-container">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div class="carousel">
+                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMHIspMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91a6N9nRebx7gVdcQTxUlhDfHuuspAnPpyEiZJyNZ%25FctBvotqHf8dXF8IrPED6uEi6N9nReYc3o4y7z6aXF%25vUqU69uWXsOsgJeV6iTiomzhRc2cSUqA7fQW4rOJUPYAiVTBsN5JsD2dioCByPQDcFG6huWXsOrD7eV6iTzbBzhRc21aKqA7fQbdaOJUPYl7nTBsN5jcG2dioCa9WQDcFGb8XYnfur0I25yPewHPRCvNzxqQHGXVD2UxLODmLRke50324wq5Z6WyosUv1G" alt="Porsche Panamera Image 1">
+                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMH1spMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91a6N9nRebx7gVdcQTxUlhDfHuuspAnPpyEiZJyNZ%25FctBvotqHf8dXF8IrPED6uEi6N9nReYc3o4y7z6aXF%25vUqU69uWXsOsgJeV6iTiomzhRc2cSUqA7fQW4rOJUPYAiVTBsN5JsD2dioCByPQDcFG6huWXsOrD7eV6iTzbBzhRc21aKqA7fQbdaOJUPYl7nTBsN5jcG2dioCa9WQDcFGb8XYnfur0I25yPewHPRCvNzxqQHGXVD2UxLODmLRke50324wq5Z6WyosUv1G" alt="Porsche Panamera Image 2">
+                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMH8spMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91a6N9nRebx7gVdcQTxUlhDfHuuspAnPpyEiZJyNZ%25FctBvotqHf8dXF8IrPED6uEi6N9nReYc3o4y7z6aXF%25vUqU69uWXsOsgJeV6iTiomzhRc2cSUqA7fQW4rOJUPYAiVTBsN5JsD2dioCByPQDcFG6huWXsOrD7eV6iTzbBzhRc21aKqA7fQbdaOJUPYl7nTBsN5jcG2dioCa9WQDcFGb8XYnfur0I25yPewHPRCvNzxqQHGXVD2UxLODmLRke50324wq5Z6WyosUv1G" alt="Porsche Panamera Image 3">
+                </div>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            <p>The Porsche Panamera delivers a combination of luxurious comfort<br>and thrilling performance with both sports car and executive sedan qualities.</p>
         </div>
     </header>
+
+    <script>
+        let slideIndex = 0;
+
+        function changeSlide(n) {
+            const slides = document.getElementsByClassName("carousel-slide");
+            slideIndex += n;
+
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            if (slideIndex >= slides.length) slideIndex = 0;
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex].style.display = "block";
+        }
+
+        changeSlide(0);
+    </script>
 </body>
 </html>
+

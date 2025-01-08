@@ -10,10 +10,38 @@
     <header>
         <div class="header-container">
             <p class="nadpis">Porsche Cayenne</p>
-            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fcayenne.png&w=640&q=75" alt="Porsche Cayenne" />
-            <p>The Porsche Cayenne is a luxury SUV that combines power,<br>performance, and comfort. With a range of engines from a V6<br>to a V8 hybrid, the Cayenne offers everything you need for both<br>daily driving and adventurous exploration.</p>
-
+            <div class="carousel-container">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div class="carousel">
+                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMHIspMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91aLN9nRebx7gVdcQDAUlhDfYrNspAnPuruiZJyNZmDctBvotqHf8dXF2sLPED6uvqcN9nReRv8o4y7z7f3F%25vUqU0ZuWXsO9ENeV6iTW6AzhRc2D5f8dXFPC%25PED6u5M3N9nReLDVo4y7zKmpF%25vUqY1NuWXsO5XJeV6iTJ88zhRc2B6EqAZ%25oD21P%25S1BAke5FogTfeIJpV7nDhQnD" alt="Porsche Cayenne Image 1">
+                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMH1spMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91aLN9nRebx7gVdcQDAUlhDfYrNspAnPuruiZJyNZmDctBvotqHf8dXF2sLPED6uvqcN9nReRv8o4y7z7f3F%25vUqU0ZuWXsO9ENeV6iTW6AzhRc2D5f8dXFPC%25PED6u5M3N9nReLDVo4y7zKmpF%25vUqY1NuWXsO5XJeV6iTJ88zhRc2B6EqAZ%25oD21P%25S1BAke5FogTfeIJpV7nDhQnD" alt="Porsche Cayenne Image 2">
+                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMH8spMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91aLN9nRebx7gVdcQDAUlhDfYrNspAnPuruiZJyNZmDctBvotqHf8dXF2sLPED6uvqcN9nReRv8o4y7z7f3F%25vUqU0ZuWXsO9ENeV6iTW6AzhRc2D5f8dXFPC%25PED6u5M3N9nReLDVo4y7zKmpF%25vUqY1NuWXsO5XJeV6iTJ88zhRc2B6EqAZ%25oD21P%25S1BAke5FogTfeIJpV7nDhQnD" alt="Porsche Cayenne Image 3">
+                </div>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            <p>The Porsche Cayenne blends luxury and performance<br>with impressive off-road capabilities and powerful engines.</p>
         </div>
     </header>
+
+    <script>
+        let slideIndex = 0;
+
+        function changeSlide(n) {
+            const slides = document.getElementsByClassName("carousel-slide");
+            slideIndex += n;
+
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            if (slideIndex >= slides.length) slideIndex = 0;
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex].style.display = "block";
+        }
+
+        changeSlide(0);
+    </script>
 </body>
 </html>
+

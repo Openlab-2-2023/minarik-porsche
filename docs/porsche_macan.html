@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porsche Macan</title>
 </head>
-
 <body>
     <header>
         <div class="header-container">
             <p class="nadpis">Porsche Macan</p>
-            <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fmacan.png&w=640&q=75" alt="Porsche Macan" />
-            <p>The Porsche Macan is a compact luxury SUV that blends performance<br>and practicality. Featuring powerful engines and dynamic<br>handling, the Macan is perfect for those who want a premium<br>driving experience in an SUV.</p>
-
+            <div class="carousel-container">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div class="carousel">
+                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMHIspMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91wRmWBi2J37gVdcQGAUlhDfYo8spAnP5QbiZJyNewectBvozJyf8dXF8VePED6uE3zN9nRe9lqo4y7z4F6F%25vUqCDxuWXsOGNmeV6iTUMizhRc2s9gqA7fQfeuOJUPYPkiTBsN5hSy2dioCXEF%25vUqrIvuWXsOdn2eV6iTC0FzhRc2GeiqA7fQr7DOJUPYNerTBsN5nU%252dEhev5HFhLHnPP2rSeZYoOaD8JiXvBC2" alt="Porsche Macan Image 1">
+                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMH1spMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91wRmWBi2J37gVdcQGAUlhDfYo8spAnP5QbiZJyNewectBvozJyf8dXF8VePED6uE3zN9nRe9lqo4y7z4F6F%25vUqCDxuWXsOGNmeV6iTUMizhRc2s9gqA7fQfeuOJUPYPkiTBsN5hSy2dioCXEF%25vUqrIvuWXsOdn2eV6iTC0FzhRc2GeiqA7fQr7DOJUPYNerTBsN5nU%252dEhev5HFhLHnPP2rSeZYoOaD8JiXvBC2" alt="Porsche Macan Image 2">
+                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMH8spMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91wRmWBi2J37gVdcQGAUlhDfYo8spAnP5QbiZJyNewectBvozJyf8dXF8VePED6uE3zN9nRe9lqo4y7z4F6F%25vUqCDxuWXsOGNmeV6iTUMizhRc2s9gqA7fQfeuOJUPYPkiTBsN5hSy2dioCXEF%25vUqrIvuWXsOdn2eV6iTC0FzhRc2GeiqA7fQr7DOJUPYNerTBsN5nU%252dEhev5HFhLHnPP2rSeZYoOaD8JiXvBC2" alt="Porsche Macan Image 3">
+                </div>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            <p>The Porsche Macan is a compact luxury SUV<br>that offers a blend of sportscar performance<br>and everyday usability, with a stylish design.</p>
         </div>
     </header>
+
+    <script>
+        let slideIndex = 0;
+
+        function changeSlide(n) {
+            const slides = document.getElementsByClassName("carousel-slide");
+            slideIndex += n;
+
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            if (slideIndex >= slides.length) slideIndex = 0;
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex].style.display = "block";
+        }
+
+        changeSlide(0);
+    </script>
 </body>
 </html>
