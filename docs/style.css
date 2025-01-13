@@ -257,5 +257,33 @@ header {
 }
 
   
+.contact-us {
+    position: fixed; 
+    top: 70px;  
+    right: 38px; 
+    z-index: 100; 
+    pointer-events: auto; 
+}
+
+.contact-button {
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #555;
+}
+
+
+
+
+
+
 
 
