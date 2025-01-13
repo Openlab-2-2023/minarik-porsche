@@ -5,12 +5,10 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-
 }
 
 header {
     background-color: black;
-    ;
     color: #ffffff;
     padding: 20px;
     text-align: center;
@@ -37,358 +35,10 @@ nav a:hover {
 .container {
     padding: 20px;
     text-align: center;
-}
-
-.car-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px auto;
-    max-width: 600px;
-    padding: 20px;
-    text-align: left;
-    transition: transform 0.2s, box-shadow 0.2s;
-    color: black;
-}
-
-.car-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.car-card img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-#backToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: #6b6969;
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-    transition: opacity 0.3s ease;
-}
-
-#backToTopBtn:hover {
-    background-color: #6b6969;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.car-card {
-    flex: 1 1 calc(33.333% - 30px);
-    margin: 15px;
-    box-sizing: border-box;
-}
-
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-header {
-    height: 100vh;
-
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    z-index: 3;
-}
-
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.nadpis {
-    position: absolute;
-    top: 15px;
-    z-index: 10;
-    font-size: 36px;
-    
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.header-container {
-    z-index: 3;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-iframe,
-video {
-    z-index: 2;
-    height: 100%;
-    width: 100%;
-    border: none;
-    object-fit: cover;
-}
-a {
-    text-decoration: none;
-}
-
-
-.porsche-link {
-    text-align: center;
-    margin: 20px;
-}
-
-.porsche-button {
-    padding: 15px 30px;
-    background-color: #6b6969;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.porsche-button:hover {
-    background-color: #6b6969;
-}
-
-@media (max-width: 768px) {
-    .car-card {
-        flex: 1 1 100%;
-    }
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-
-header {
-    padding: 20px;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-}
-
-
-.carousel-container {
-    position: relative;
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-
-.carousel {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-}
-
-
-.carousel-slide {
-    display: none;
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-
-header {
-    padding: 20px;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-}
-
-
-.carousel-container {
-    position: relative;
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-
-.carousel {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-}
-
-
-.carousel-slide {
-    display: none;
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-body, html {
-    height: 100%;
-    width: 100%;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-
-body {
-    background: linear-gradient(135deg, #000000, #111111);
-    color: #fafafa;
-}
-
-
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    text-align: center;
-    background-color: black;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.nadpis {
-    position: absolute;
-    top: 15px;
-    z-index: 10;
-    font-size: 36px;
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.header-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    z-index: 3;
-    padding: 0;
-    margin: 0;
-}
-
-iframe,
-video {
-    height: 100%;
-    width: 100%;
-    border: none;
-    object-fit: cover;
-    z-index: 2;
-}
-
-
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #141414;
-}
-
-nav a {
-    color: #ffffff;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-}
-
-nav a:hover {
-    background-color: #575757;
-}
-
-
-.container {
-    padding: 20px;
-    text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 
 .car-card {
     background-color: #ffffff;
@@ -412,7 +62,6 @@ nav a:hover {
     border-radius: 10px;
 }
 
-
 .car-card {
     flex: 1 1 calc(33.333% - 30px);
     margin: 15px;
@@ -424,7 +73,6 @@ nav a:hover {
         flex: 1 1 100%;
     }
 }
-
 
 #backToTopBtn {
     display: none;
@@ -447,14 +95,12 @@ nav a:hover {
     background-color: #6b6969;
 }
 
-
 .carousel-container {
     position: relative;
     width: 80%;
     max-width: 800px;
     margin: 20px auto;
 }
-
 
 .carousel {
     display: flex;
@@ -467,7 +113,6 @@ nav a:hover {
     max-width: 100%;
     border-radius: 10px;
 }
-
 
 .prev, .next {
     position: absolute;
@@ -495,44 +140,9 @@ nav a:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    text-align: center;
-    background-color: black;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding-top: 20px; 
-}
-
-
-.nadpis {
-    position: absolute;
-    top: 15px;
-    z-index: 10;
-    font-size: 36px;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 10px;  
-}
-
-
-.header-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    z-index: 3;
-    padding: 0;
-    margin: 0;
-}
-
-
 .porsche-link {
     text-align: center;
-    margin: 40px 0 20px; 
+    margin: 40px 0 20px;
 }
 
 .porsche-button {
@@ -543,30 +153,19 @@ header {
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 .porsche-button:hover {
     background-color: #6b6969;
 }
 
-
 @media (max-width: 768px) {
-    .car-card {
-        flex: 1 1 100%;
-    }
-
-    
     .porsche-button {
         padding: 12px 24px;
     }
 }
 
-@media (max-width: 768px) {
-    .action-button {
-        padding: 10px 20px;
-    }
-}
 footer {
     position: fixed;
     bottom: 0;
@@ -574,7 +173,89 @@ footer {
     background-color: #000000;
     padding: 10px;
     text-align: center;
-  }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+}
+
+.header-container video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.floating-nav {
+    position: fixed;
+    top: -60px; 
+    left: 0;
+    right: 0;
+    background-color: #333;
+    z-index: 100;
+    transition: top 0.3s;
+    padding: 10px 0;
+}
+
+.floating-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.floating-nav ul li {
+    margin: 0 15px;
+}
+
+.floating-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.floating-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#backToTopBtn:hover {
+    background-color: #555;
+}
+
+.porsche-button {
+    background-color: #f5f5f5;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.porsche-button:hover {
+    background-color: #333;
+    color: white;
+}
+
   
 
 

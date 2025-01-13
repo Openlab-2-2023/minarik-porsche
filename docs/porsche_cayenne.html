@@ -5,23 +5,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porsche Cayenne</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+        
+        .carousel-slide {
+            width: 100%;
+            display: none;
+        }
+        
+        .carousel-slide:first-child {
+            display: block;
+        }
+        
+        .carousel-slide img {
+            display: block;
+            max-width: 100%; 
+            margin: 0 auto;
+        }
+        
+        button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .prev {
+            left: 0;
+        }
+        
+        .next {
+            right: 0;
+        }
+        
+        .features-table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .features-table th, .features-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .features-table th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        .features-table tr:hover {
+            background-color: #ecf0f1;
+        }
+        
+        .features-table td {
+            color: #2c3e50;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <p class="nadpis">Porsche Cayenne</p>
-            <div class="carousel-container">
-                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                <div class="carousel">
-                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMHIspMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91aLN9nRebx7gVdcQDAUlhDfYrNspAnPuruiZJyNZmDctBvotqHf8dXF2sLPED6uvqcN9nReRv8o4y7z7f3F%25vUqU0ZuWXsO9ENeV6iTW6AzhRc2D5f8dXFPC%25PED6u5M3N9nReLDVo4y7zKmpF%25vUqY1NuWXsO5XJeV6iTJ88zhRc2B6EqAZ%25oD21P%25S1BAke5FogTfeIJpV7nDhQnD" alt="Porsche Cayenne Image 1">
-                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMH1spMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91aLN9nRebx7gVdcQDAUlhDfYrNspAnPuruiZJyNZmDctBvotqHf8dXF2sLPED6uvqcN9nReRv8o4y7z7f3F%25vUqU0ZuWXsO9ENeV6iTW6AzhRc2D5f8dXFPC%25PED6u5M3N9nReLDVo4y7zKmpF%25vUqY1NuWXsO5XJeV6iTJ88zhRc2B6EqAZ%25oD21P%25S1BAke5FogTfeIJpV7nDhQnD" alt="Porsche Cayenne Image 2">
-                    <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMH8spMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91aLN9nRebx7gVdcQDAUlhDfYrNspAnPuruiZJyNZmDctBvotqHf8dXF2sLPED6uvqcN9nReRv8o4y7z7f3F%25vUqU0ZuWXsO9ENeV6iTW6AzhRc2D5f8dXFPC%25PED6u5M3N9nReLDVo4y7zKmpF%25vUqY1NuWXsO5XJeV6iTJ88zhRc2B6EqAZ%25oD21P%25S1BAke5FogTfeIJpV7nDhQnD" alt="Porsche Cayenne Image 3">
-                </div>
-                <button class="next" onclick="changeSlide(1)">&#10095;</button>
-            </div>
-            <p>The Porsche Cayenne blends luxury and performance<br>with impressive off-road capabilities and powerful engines.</p>
+    <div class="carousel-container">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="carousel">
+            <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMHIspMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91aLN9nRebx7gVdcQDAUlhDfYrNspAnPuruiZJyNZmDctBvotqHf8dXF2sLPED6uvqcN9nReRv8o4y7z7f3F%25vUqU0ZuWXsO9ENeV6iTW6AzhRc2D5f8dXFPC%25PED6u5M3N9nReLDVo4y7zKmpF%25vUqY1NuWXsO5XJeV6iTJ88zhRc2B6EqAZ%25oD21P%25S1BAke5FogTfeIJpV7nDhQnD" alt="Porsche Cayenne Image 1">
+            <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMH1spMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91aLN9nRebx7gVdcQDAUlhDfYrNspAnPuruiZJyNZmDctBvotqHf8dXF2sLPED6uvqcN9nReRv8o4y7z7f3F%25vUqU0ZuWXsO9ENeV6iTW6AzhRc2D5f8dXFPC%25PED6u5M3N9nReLDVo4y7zKmpF%25vUqY1NuWXsO5XJeV6iTJ88zhRc2B6EqAZ%25oD21P%25S1BAke5FogTfeIJpV7nDhQnD" alt="Porsche Cayenne Image 2">
+            <img class="carousel-slide" src="https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXkBuNYdMGF4tl3U0%25z8rMH8spMBvMZq6G5OtgSv31nBJaA4qh4NSEGewirQ91aLN9nRebx7gVdcQDAUlhDfYrNspAnPuruiZJyNZmDctBvotqHf8dXF2sLPED6uvqcN9nReRv8o4y7z7f3F%25vUqU0ZuWXsO9ENeV6iTW6AzhRc2D5f8dXFPC%25PED6u5M3N9nReLDVo4y7zKmpF%25vUqY1NuWXsO5XJeV6iTJ88zhRc2B6EqAZ%25oD21P%25S1BAke5FogTfeIJpV7nDhQnD" alt="Porsche Cayenne Image 3">
         </div>
-    </header>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <table class="features-table">
+        <caption><strong>Porsche Cayenne Features:</strong></caption>
+        <tr>
+            <th>Feature</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Engine</td>
+            <td>3.0L Turbocharged V6</td>
+        </tr>
+        <tr>
+            <td>Horsepower</td>
+            <td>335 hp (Base Model)</td>
+        </tr>
+        <tr>
+            <td>Top Speed</td>
+            <td>152 mph (245 km/h)</td>
+        </tr>
+        <tr>
+            <td>Acceleration</td>
+            <td>0-60 mph in 5.9 seconds</td>
+        </tr>
+        <tr>
+            <td>Transmission</td>
+            <td>8-speed automatic</td>
+        </tr>
+        <tr>
+            <td>Drive Type</td>
+            <td>All-wheel drive</td>
+        </tr>
+        <tr>
+            <td>Seats</td>
+            <td>5 seats</td>
+        </tr>
+        <tr>
+            <td>Infotainment</td>
+            <td>12.3" touchscreen with Apple CarPlay and Android Auto</td>
+        </tr>
+        <tr>
+            <td>Price Range</td>
+            <td>Starting at $67,500</td>
+        </tr>
+    </table>
 
     <script>
         let slideIndex = 0;
@@ -44,4 +168,5 @@
     </script>
 </body>
 </html>
+
 

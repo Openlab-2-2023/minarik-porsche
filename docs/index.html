@@ -6,27 +6,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porsche</title>
+    
 </head>
 
 <body>
-    
+
+   
     <button onclick="topFunction()" id="backToTopBtn" title="Back to Top">Back To Top</button>
+
+   
+    <nav id="floatingNav" class="floating-nav">
+        <ul>
+            <li><a href="porsche_911.html" onclick="showLoginBtn()">Porsche 911</a></li>
+            <li><a href="porsche_taycan.html" onclick="showLoginBtn()">Porsche Taycan</a></li>
+            <li><a href="porsche_panamera.html" onclick="showLoginBtn()">Porsche Panamera</a></li>
+            <li><a href="porsche_718.html" onclick="showLoginBtn()">Porsche 718 Cayman</a></li>
+            <li><a href="porsche_macan.html" onclick="showLoginBtn()">Porsche Macan</a></li>
+            <li><a href="porsche_cayenne.html" onclick="showLoginBtn()">Porsche Cayenne</a></li>
+        </ul>
+    </nav>
 
     <script>
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            const btn = document.getElementById("backToTopBtn");
+            const backToTopBtn = document.getElementById("backToTopBtn");
+            const floatingNav = document.getElementById("floatingNav");
+
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                btn.style.display = "block";
+                backToTopBtn.style.display = "block";
+                floatingNav.style.top = "0"; 
             } else {
-                btn.style.display = "none";
+                backToTopBtn.style.display = "none";
+                floatingNav.style.top = "-60px"; 
             }
         }
 
         function topFunction() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+    
     </script>
 
     <header>
@@ -35,7 +55,6 @@
         </div>
     </header>
 
-
     <div class="porsche-link">
         <h2>Visit Porsche Official Website</h2>
         <a href="https://www.porsche.com" target="_blank" class="porsche-button">Go to Porsche</a>
@@ -43,67 +62,54 @@
 
     <div class="container">
         <div class="car-card">
-            <a href="porsche_911.html">
+            <a href="porsche_911.html" onclick="showLoginBtn()">
                 <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2F911.png&w=640&q=75" alt="Porsche 911">
                 <h2>Porsche 911</h2>
             </a>
-            <p>The Porsche 911 is a timeless sports car
-                that combines classic design with cutting-edge performance.
-                Known for its powerful engines, precise handling,
-                and iconic silhouette, the 911 offers an exhilarating driving experience.</p>
+            <p>The Porsche 911 is a timeless sports car that combines classic design with cutting-edge performance...</p>
         </div>
 
         <div class="car-card">
-            <a href="porsche_taycan.html">
+            <a href="porsche_taycan.html" onclick="showLoginBtn()">
                 <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Ftaycan.png&w=640&q=75" alt="Porsche Taycan">
                 <h2>Porsche Taycan</h2>
             </a>
-            <p>The Porsche Taycan is an all-electric sports sedan
-                combining stunning performance, cutting-edge technology,
-                and the unmistakable Porsche driving experience.</p>
+            <p>The Porsche Taycan is an all-electric sports sedan...</p>
         </div>
 
         <div class="car-card">
-            <a href="porsche_panamera.html">
+            <a href="porsche_panamera.html" onclick="showLoginBtn()">
                 <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fpanamera.png&w=640&q=75" alt="Porsche Panamera">
                 <h2>Porsche Panamera</h2>
             </a>
-            <p>The Porsche Panamera delivers a combination of luxurious comfort
-                and thrilling performance with both sports car and executive sedan qualities.</p>
+            <p>The Porsche Panamera delivers a combination of luxurious comfort...</p>
         </div>
 
         <div class="car-card">
-            <a href="porsche_718.html">
+            <a href="porsche_718.html" onclick="showLoginBtn()">
                 <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2F718.png&w=640&q=75" alt="Porsche 718/Boxster/Cayman">
                 <h2>Porsche 718 Cayman</h2>
             </a>
-            <p>The Porsche 718 Cayman combines sharp handling and exhilarating performance
-                with a mid-engine layout and powerful turbocharged engines.</p>
+            <p>The Porsche 718 Cayman combines sharp handling...</p>
         </div>
 
         <div class="car-card">
-            <a href="porsche_macan.html">
+            <a href="porsche_macan.html" onclick="showLoginBtn()">
                 <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fmacan.png&w=640&q=75" alt="Porsche Macan">
                 <h2>Porsche Macan</h2>
             </a>
-            <p>The Porsche Macan is a compact luxury SUV
-                that offers a blend of sportscar performance
-                and everyday usability, with a stylish design.</p>
+            <p>The Porsche Macan is a compact luxury SUV...</p>
         </div>
 
         <div class="car-card">
-            <a href="porsche_cayenne.html">
+            <a href="porsche_cayenne.html" onclick="showLoginBtn()">
                 <img src="https://shop.porsche.com/_next/image?url=%2Fmodels%2Fcayenne.png&w=640&q=75" alt="Porsche Cayenne">
                 <h2>Porsche Cayenne</h2>
             </a>
-            <p>The Porsche Cayenne blends luxury and performance
-                with impressive off-road capabilities and powerful engines.</p>
+            <p>The Porsche Cayenne blends luxury and performance...</p>
         </div>
     </div>
 
 </body>
 
 </html>
-
-
-

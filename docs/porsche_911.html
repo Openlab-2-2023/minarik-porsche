@@ -5,11 +5,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porsche 911</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+        
+        .carousel-slide {
+            width: 100%;
+            display: none;
+        }
+        
+        .carousel-slide:first-child {
+            display: block;
+        }
+        
+        .carousel-slide img {
+            display: block;
+            max-width: 100%; 
+            margin: 0 auto;
+        }
+        
+        button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .prev {
+            left: 0;
+        }
+        
+        .next {
+            right: 0;
+        }
+        
+        .features-table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .features-table th, .features-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .features-table th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        .features-table tr:hover {
+            background-color: #ecf0f1;
+        }
+        
+        .features-table td {
+            color: #2c3e50;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <p class="nadpis">Porsche 911</p>
             <div class="carousel-container">
                 <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
                 <div class="carousel">
@@ -19,9 +104,52 @@
                 </div>
                 <button class="next" onclick="changeSlide(1)">&#10095;</button>
             </div>
-            <p>The Porsche 911 is a timeless sports car<br>that combines classic design with cutting-edge performance.<br>Known for its powerful engines, precise handling,<br>and iconic silhouette, the 911 offers an exhilarating driving experience.</p>
         </div>
-    </header>   
+    </header>
+
+    <table class="features-table">
+        <caption><strong>Porsche 911 Features:</strong></caption>
+        <tr>
+            <th>Feature</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Engine</td>
+            <td>3.0L Twin-Turbo Flat-6 (Carrera)</td>
+        </tr>
+        <tr>
+            <td>Horsepower</td>
+            <td>379 hp (Carrera)</td>
+        </tr>
+        <tr>
+            <td>Top Speed</td>
+            <td>182 mph (292 km/h)</td>
+        </tr>
+        <tr>
+            <td>Acceleration</td>
+            <td>0-60 mph in 4.0 seconds (Carrera)</td>
+        </tr>
+        <tr>
+            <td>Transmission</td>
+            <td>8-speed dual-clutch automatic or 7-speed manual</td>
+        </tr>
+        <tr>
+            <td>Drive Type</td>
+            <td>Rear-wheel drive or all-wheel drive (AWD)</td>
+        </tr>
+        <tr>
+            <td>Seats</td>
+            <td>2 + 2 (Limited rear space)</td>
+        </tr>
+        <tr>
+            <td>Infotainment</td>
+            <td>10.9" touchscreen with Apple CarPlay and Android Auto</td>
+        </tr>
+        <tr>
+            <td>Price Range</td>
+            <td>Starting at $101,200 (Carrera)</td>
+        </tr>
+    </table>
 
     <script>
         let slideIndex = 0;
@@ -30,21 +158,18 @@
             const slides = document.getElementsByClassName("carousel-slide");
             slideIndex += n;
 
-            
             if (slideIndex < 0) slideIndex = slides.length - 1;
             if (slideIndex >= slides.length) slideIndex = 0;
 
-           
             for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
 
-            
             slides[slideIndex].style.display = "block";
         }
 
-  
         changeSlide(0);
     </script>
 </body>
 </html>
+
